@@ -85,7 +85,6 @@ def on_message(ws, message):
                     order = client.order_market_buy(
                     symbol = TRADE_SYMBOL,
                     quantity = TRADE_QUANTITY)
-                    asyncio.run(buy())
                     in_position = True
 
 ws = websocket.WebSocketApp(SOCKET, on_open=on_open, on_close=on_close, on_message=on_message)
